@@ -1,0 +1,111 @@
+/* CSS RESET */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+/* DESIGN SYSTEM */
+@font-face {
+    font-family: Inter;
+    src: url('./assets/fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+}
+
+:root { /* specificity higher than html element */
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    --heading-font-size: 1.7rem;
+
+    --grey-900: #141414;
+    --grey-800: #1f1f1f;
+    --grey-700: #333333;
+    --green: #c4f82a;
+
+    --spacing-50: 4px;
+    --spacing-100: 8px;
+    --spacing-150: 12px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-500: 40px;
+}
+
+body {
+    line-height: 1.5;
+}
+
+/* STYLING */
+body {
+    background-color: var(--grey-900);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    width: 384px;
+    height: 611px;
+    max-width: 90vw;
+
+    padding: var(--spacing-500);
+    gap: var(--spacing-300);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* cross-axis is horizontal */
+
+    background-color: var(--grey-800);
+    color: white;
+}
+
+header{
+    text-align: center;
+}
+
+header > p {
+    color: var(--green);
+    font-weight: bold;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-200);
+    width: 100%;
+}
+
+li {
+    background-color: var(--grey-700);
+    border-radius: var(--spacing-100);
+    text-align: center; /* ignored by flex containers */
+    padding: 1rem;
+    font-weight: bold;
+}
+
+li:hover, li:focus {
+    background-color: var(--green);
+    color: black;
+}
+
+img {
+    width: 88px;
+    border-radius: 50%;
+}
+
+h1 {
+    font-size: var(--heading-font-size);
+}
